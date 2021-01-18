@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Password Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Password Generator</h1>
+        <form id="password-form">
+            <textarea id="password"></textarea>
+            <fieldset name="password-criteria">
+                <label for="password-length">Password Length:</label>
+                <input id="password-length" name="password-length" type="number" min="8" max="128" placeholder="8" required />
+                <p class="password-instructions">Your password needs to be at least 8 characters, and no more than 128</p>
+                
+                <fieldset name="character-types">
+                    <h2>Password criteria:</h2>
+                    <p>Please choose at least one option</p>
+                    <label for="upper-case">Upper Case:</label>
+                    <input class="checkbox" type="checkbox" name="upper-case"/>
+
+                    <label for="lower-case">Lower Case:</label>
+                    <input class="checkbox" type="checkbox" name="lower-case" />
+
+                    <label for="numbers">Numbers:</label>
+                    <input class="checkbox" type="checkbox" name="numbers" />
+
+                    <label for="symbols">Symbols:</label>
+                    <input class="checkbox" type="checkbox" name="symbols" />
+                </fieldset>
+            </fieldset>
+            <button id="generate" type="submit">Generate Password</button>
+        </form>
+        <script src="./index.js" async defer></script>
+    </body>
+</html>
